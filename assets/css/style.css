@@ -1,0 +1,27 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #e0e0e0 !important;
+    padding: 0px;
+    font-family: 'Courier New', Courier, monospace;
+}
+/* Section 1 */
+
+
+
+.texta-border {
+    border: 1px solid rgb(105, 105, 105);
+}
+
+/* Section 1 */
+
+/* Buttons */
+
+.btn-success {
+    border: 1px solid rgb(94, 94, 94);
+    box-shadow: 3px 3px 5px transparent;
+    transition: all ease-in .2s;
+}
+/* Buttons */

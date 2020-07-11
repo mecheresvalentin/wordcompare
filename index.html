@@ -1,0 +1,74 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="WordCompare">
+    <meta name="robots" content="index, follow">
+    <script src="assets/javascript/99Kb9EHL_DUUYWsu.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>WordCompare</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-info">
+            <a class="navbar-brand mx-auto text-light font-weight-bold">WordCompare</a>
+        </nav>
+    </header>
+    <section> 
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 text-center mt-5">
+                    <button type="submit" onclick="compare();" class="btn px-4 btn-success mx-5" data-toggle="modal" data-target="#exampleModalLong">
+                    Compare!
+                    </button>
+                    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Results</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p id="diffs"></p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="text-lg-center text-md-center text-sm-center my-2">
+                        <button class="btn btn-info" onclick="clearArea()" type="button">Clear</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-center" style="height: 50vh;">
+                <div class="col-md-6 my-3">
+                    <textarea class="form-control texta-border" id="RAz9QH3D3nzqCCQ" cols="500" rows="10" placeholder="Paste your version of a text here.">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consectetur tellus ac sapien hendrerit rhoncus at pretium purus. Morbi non felis a ipsum eleifend bibendum a sed justo. Nulla facilisi. Suspendisse sit amet rhoncus lorem. In id eleifend neque, eu cursus odio. In lobortis commodo nibh. In cursus quam at efficitur venenatis. Vivamus tristique eros sed arcu pretium volutpat. Maecenas lobortis sollicitudin fermentum. Nullam hendrerit pulvinar ante eu condimentum. Nullam eget sapien nec nulla lacinia blandit. Donec auctor dignissim diam, at dictum risus pharetra ut. Quisque ornare eros urna, quis maximus est mattis nec. Cras egestas varius quam ac vulputate.
+                    Cras tincidunt interdum ipsum, ac ornare dui vestibulum sed. Duis semper eu lacus vel euismod. Donec ut metus iaculis, bibendum ipsum a, condimentum lacus. Aliquam vel lectus dui. Integer volutpat dignissim ultrices. Pellentesque lectus nunc, mollis sit amet molestie ut, fermentum in magna. Praesent scelerisque ligula sed velit accumsan interdum. Nulla nec dignissim augue. Integer venenatis et dolor at scelerisque. Duis lorem libero, scelerisque vel tellus in, dignissim euismod turpis. Quisque ac purus non erat tincidunt fringilla.
+                    </textarea>
+                    <div class="text-lg-left text-md-left text-sm-center my-2">
+                </div>
+                </div>
+                <div class="col-md-6 my-3">
+                    <textarea class="form-control texta-border" id="VanasqWvd2PfKPh" cols="500" rows="10" placeholder="Paste original version of a text here.">Lorem ipsum dolor sit amer, consectetur adipiscing elit. Pellentesque consectetur tellus ac sapien hendrerit rhoncus at pretium purus. Morbi non felis a ipsum eleifend bibendum a sed justo. Nulla facilisi. Suspendisse sit amet rhoncus lorem.
+                        In id eleifend neque, eu cursus odio. In lobortis commodo nibh. In cursus quam at efficitur venenatis. Vivamus tristique eros sed arcu pretium volutpat. Pellentesque et nulla elit. Maecenas lobortis sollicitudin fermentum. Nullam hendrerit pulvinar ante eu condimentum. Donec auctor dignissim diam, at dictum risus pharetra ut. Quisque ornare eros urna, quis maximus est mattis nec. Cras egestas varius quam ac vulputate. Cras tincidunt interdum ipsum, ac ornare dui vestibulum sed. Duis semper eu lacus vel euismod. Donec ut metus iaculis, bibendum ipsum a, condimentum lacus.
+                        Aliquam vel lectus dui. Integer volutpat dignissim ultrices. Pellentesque lectus nunc, mollis sit amet molestie ut, fermentum in magna. Praesent scelerisque ligula sed velit accumsan interdum. Nulla nec dignissim augue. Integer venenatis et dolor at scelerisque. Duis lorem libero, scelerisque vel tellus in, dignissim euismod turpis. Quisque ac purus non erat tincidunt fringilla.
+                    </textarea>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <script src="assets/javascript/script.js"></script>
+    <!-- Javascript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
